@@ -1,0 +1,45 @@
+{
+    "$id": "",
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "title": "Educational Credential Verification",
+    "description": "Schema defining a verifiable credential that validates whether a student has received an academic degree from a recognized institution",
+    "type": "object",
+    "allOf": [
+        {
+            "$ref": "https://api-pilot.ebsi.eu/trusted-schemas-registry/v3/schemas/0xbe77a21356835dc09d3d8149ea832ae0a4bae0ae9c869d18219ef8f4a74b4644"
+        },
+        {
+            "properties": {
+                "credentialSubject": {
+                    "description": "Educational Credential for Student",
+                    "type": "object",
+                    "properties": {
+                        "studentName": {
+                            "description": "Full name of the student",
+                            "type": "string"
+                        },
+                        "university": {
+                            "description": "Name of the university that issued the degree",
+                            "type": "string"
+                        },
+                        "degree": {
+                            "description": "The academic degree received by the student",
+                            "type": "string"
+                        },
+                        "issueDate": {
+                            "description": "Date when the degree was issued",
+                            "type": "string",
+                            "format": "date"
+                        }
+                    },
+                    "required": [
+                        "studentName",
+                        "university",
+                        "degree",
+                        "issueDate"
+                    ]
+                }
+            }
+        }
+    ]
+}

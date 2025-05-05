@@ -1,5 +1,5 @@
 {
-    "$id": "",
+    "$id": "https://raw.githubusercontent.com/blockchain-lab-um/credential-schema-registry/refs/heads/main/schemas/education/diploma-schema.json",
     "$schema": "https://json-schema.org/draft/2020-12/schema",
     "allOf": [
         {
